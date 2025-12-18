@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         # This is the target we want to change
-      - image: testcontainers-cicd:v1
+      - image: testcontainers-cicd:v1.22771
         name: testcontainers-cicd
         ports:
         - containerPort: 3306
