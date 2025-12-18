@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: example.yaml
+  name: example.yaml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example.yaml
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: example.yaml
+    spec:
+      containers:
+        # This is the target we want to change
+      - image: testcontainers-cicd:v1
+        name: testcontainers-cicd
+        ports:
+        - containerPort: 3306
+        resources: {}
+status: {}
